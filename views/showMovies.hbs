@@ -1,0 +1,45 @@
+<h4>Movie Details:- </h4>
+<table border="1">
+    <tr><th>Title</th><th>Poster</th><th>Plot</th><th>Genres</th><th>Cast</th>
+    <th>Languages</th><th>Year</th><th>Countries</th></tr>
+    {{#if moviedata}}
+        {{#each moviedata}}
+        {{#if this.title}}
+            <tr>
+                <td>{{this.title}}</td>
+                <td><img src="{{this.poster}}" width="40" height="60"/></td>
+                <td>{{this.plot}}</td>
+                <td>
+                {{#each this.genres}}
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+                </td>
+                <td>
+                {{#each this.cast}}
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+                </td>
+                <td>
+                {{#each this.languages}}
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+                </td>
+                <td>{{this.year}}</td>
+                <td>
+                {{#each this.countries}}
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+                </td>
+            </tr>
+        {{/if}}
+    {{/each}}
+    {{/if}}
+</table>
