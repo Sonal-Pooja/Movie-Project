@@ -10,6 +10,5 @@
 ******************************************************************************
 ***/ 
 module.exports = {
-    //url : process.env.URL       //url will be taken from .env file
-    url : "mongodb+srv://sonal:Sonal2111@spcluster.eabxs58.mongodb.net/sample_mflix"
+    url : process.env.URL       //url will be taken from .env file
  };
